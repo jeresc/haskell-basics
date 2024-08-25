@@ -2,45 +2,47 @@
 import Data.List
 import System.IO
 
--- Int -2^63 2^63
-maxInt = maxBound :: Int
-minInt = minBound :: Int
+trueAndFalse = True && False
+trueOrFalse = True || False
+notTrue = not(True)
 
--- Integer
--- Float
+primeNumbers = [3,5,7,11]
 
--- Doubles 11 points of precision
-bigFloat = 3.99
+morePrimes = primeNumbers ++ [13,17,19,23,29]
 
--- Bool True False
--- Char
--- Tuple
+favNums = 2 : 7 : 21 : 66 :[]
 
-always5 :: Int
-always5 = 5
+multList = [[3,5,7], [11,13,17]]
 
-sumOfNums = sum [1..1000]
+extendedPrimes = 2 : morePrimes
+lenPrimes = length extendedPrimes
 
--- * / - +
-addEx = 5 + 4 
+revPrimes = reverse extendedPrimes
 
-modEx = mod 5 4
-modEx2 = 5 `mod` 4
+isListEmpty = null extendedPrimes
 
-negNumEx = 5 + (-4)
+secondPrime = extendedPrimes !! 1
 
-num9 = 9
-sqrtOf9 = sqrt (fromIntegral num9)
+firstPrime = head extendedPrimes
 
--- Built in math functions
-piVal = pi
-ePow9 = exp 9
-logOf9 = log 9
-squared9 = 9 ** 2
-truncatedVal = truncate 9.999
-roundVal = round 9.999
-ceilingVal = ceiling 9.999
-floorVar = floor 9.999
+lastPrime = last extendedPrimes
 
--- Also sin, cos, tan, asin, atan, acos, sinh,
--- tanh, cosh, asinh, atanh, acosh
+primeInit = init extendedPrimes
+
+first3Primes = take 3 extendedPrimes
+
+removedPrimes = drop 3 extendedPrimes
+
+is7InList = 7 `elem` extendedPrimes
+
+maxPrime = maximum extendedPrimes
+
+sumPrimes = sum extendedPrimes
+
+prodPrimes = product extendedPrimes
+
+zeroToTen = [0..10]
+
+evenList = [2,4..20]
+
+letterList = ['A','C'..'Z']
