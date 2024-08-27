@@ -2,47 +2,17 @@
 import Data.List
 import System.IO
 
-trueAndFalse = True && False
-trueOrFalse = True || False
-notTrue = not(True)
+infinPow10 = [10,20..]
 
-primeNumbers = [3,5,7,11]
+many2s = take 10 (repeat 2)
 
-morePrimes = primeNumbers ++ [13,17,19,23,29]
+many3s = replicate 10 3
 
-favNums = 2 : 7 : 21 : 66 :[]
+cycleList = take 10 (cycle [1,2,3,4,5])
 
-multList = [[3,5,7], [11,13,17]]
+listTimes2 = [x * 2 | x <- [1..10]]
+listTimes3 = [x * 3 | x <- [1..10], x * 3 <= 10]
 
-extendedPrimes = 2 : morePrimes
-lenPrimes = length extendedPrimes
+dividesBy9n13 = [ x | x <- [1..500], x `mod` 13 == 0, x `mod` 9 == 0]
 
-revPrimes = reverse extendedPrimes
-
-isListEmpty = null extendedPrimes
-
-secondPrime = extendedPrimes !! 1
-
-firstPrime = head extendedPrimes
-
-lastPrime = last extendedPrimes
-
-primeInit = init extendedPrimes
-
-first3Primes = take 3 extendedPrimes
-
-removedPrimes = drop 3 extendedPrimes
-
-is7InList = 7 `elem` extendedPrimes
-
-maxPrime = maximum extendedPrimes
-
-sumPrimes = sum extendedPrimes
-
-prodPrimes = product extendedPrimes
-
-zeroToTen = [0..10]
-
-evenList = [2,4..20]
-
-letterList = ['A','C'..'Z']
+sortedList = sort [3,1,9,5,6]
