@@ -2,8 +2,20 @@
 import Data.List
 import System.IO
 
-primes = [3,13,17,19,23,29,31]
+randTuple = (1, "Random Tuple")
 
-pow3List = [3^n | n <- [1..10]]
+bobSmith = ("Bob Smith", 52)
 
-multTable = [[x*y | y <- [1..10]] | x <- [1..10]]
+bobsName = fst bobSmith
+bobsAge = snd bobSmith
+
+names = ["Bob", "Mary", "Tom"]
+addresss = ["123 Main St", "456 Elm St", "789 Oak St"]
+
+namesAndAddresses = zip names addresss
+
+-- compile with ghc --make main
+main = do
+  putStrLn "What is your name?"
+  name <- getLine
+  putStrLn ("Hello, " ++ name ++ "!")
