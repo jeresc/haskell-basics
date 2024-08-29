@@ -2,20 +2,23 @@
 import Data.List
 import System.IO
 
-randTuple = (1, "Random Tuple")
+addMe :: Int -> Int -> Int
 
-bobSmith = ("Bob Smith", 52)
+-- funcName param1 param2 = operations (returned value)
+addMe x y = x + y
 
-bobsName = fst bobSmith
-bobsAge = snd bobSmith
+addTuples :: (Int, Int) -> (Int, Int) -> (Int, Int)
+addTuples (x1, y1) (x2, y2) = (x1 + x2, y1 + y2)
 
-names = ["Bob", "Mary", "Tom"]
-addresss = ["123 Main St", "456 Elm St", "789 Oak St"]
+whatAge :: Int -> String
+whatAge 16 = "You can drive"
+whatAge 18 = "You can vote"
+whatAge 21 = "You're an adult"
+whatAge _ = "Nothing important"
 
-namesAndAddresses = zip names addresss
-
--- compile with ghc --make main
 main = do
-  putStrLn "What is your name?"
-  name <- getLine
-  putStrLn ("Hello, " ++ name ++ "!")
+  putStrLn "Enter two numbers:"
+  x <- readLn
+  y <- readLn
+  let z = addMe x y
+  putStrLn $ "The sum of " ++ show x ++ " and " ++ show y ++ " is " ++ show z
